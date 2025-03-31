@@ -1,23 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement(
-    "div", 
-    { id: "parent"}, 
-    [React.createElement(
-        "div", 
-        { id: "child"},
-        React.createElement("h1", {}, "Namaste React"),
-        React.createElement("h2", {}, "I am an h2 tag"),
-    ) ,
-    React.createElement(
-        "div", 
-        { id: "child2"},
-        React.createElement("h1", {}, "I am an h1 tag"),
-        React.createElement("h2", {}, "I am an h2 tag"),
-    )]
-);
+// React element
+// React.createElement => ReactElement.JS (Object) => HTMLElement(render)
+const heading = React.createElement("h1", null, "Hello World");
+
+console.log(heading); 
+
+// JSX - HTMl-like or XML-like syntax
+// jsx(transpiled) -> before going to the js engine
+
+// JSX => React.createElement => ReactElement.JS (Object) => HTMLElement(render)
+const jsxHeading = <h1>Hello World from JSX</h1>;
+console.log(jsxHeading); 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-            
-root.render(heading);
+root.render(jsxHeading); 
+
