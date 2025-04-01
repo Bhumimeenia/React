@@ -1,25 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React element
-const jsxHeading = <h1>Hello World from JSX</h1>;
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(jsxHeading); 
+const ele = <span>Namaste React</span>;
 
-// React component
-// -class based
-// -function based
+const title = (
+  <h1>
+    Hey I'm Bhumi
+    {ele}
+  </h1>
+);
 
-// const Fn = () => true; 
+// const Title = function () {
+//   return <h1>Namaste Bhumi</h1>;
+// };
 
-// const Fn1  = () => {
-//     return true;
-// }
-
-// Root Functional Componenet
-const HeadingComponent = () => {
-  return <h1>Hello World from React Component</h1>;
-}; 
+const a = 10000;
+// Componenet Composition
+const HeadingComponent = () => (
+  <div id="container">
+    {/* <Title /> */}
+    {title}
+    <h1>Hello World from React Component</h1>
+     {a + 100}
+  </div>
+);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponent/>); 
-
+root.render(<HeadingComponent />);
